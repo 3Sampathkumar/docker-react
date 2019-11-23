@@ -1,9 +1,10 @@
+language: generic
 sudo: required
 services:
   - docker
 
 before_install:
-  - docker build -t sampathai/docker-react -f Dockerfile.dev .
+  - docker build -t docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true sampathai/docker-react npm run test
+  - docker run -e CI=true docker-react npm run test
