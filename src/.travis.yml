@@ -2,6 +2,7 @@ language: generic
 sudo: required
 services:
   - docker
+  - rake
 
 before_install:
   - docker build -t docker-react -f Dockerfile.dev .
